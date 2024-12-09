@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Resume</title>
+  <link rel="stylesheet" href="css/resume.css">
+</head>
+<body>
+
+  <div class="resume-container">
+    <center>
+      <img id="resumeImage" src="" alt="Profile Picture" />
+      <br>
+      <header>
+        <h1 id="resumeName">Your Name</h1>
+        <br>
+        <h3 id="resumeTitle" class="title">Your Job Title</h3>
+      </header>
+
+      <section class="contact-info">
+        <p>Email: <span id="resumeEmail">Your Email</span></p>
+        <p>Phone: <span id="resumePhone">Your Phone</span></p>
+        <p>Location: <span id="resumeLocation">Your Location</span></p>
+      </section>
+    </center>
+
+    <section class="section">
+      <h2>Education</h2>
+      <p id="resumeEducation">Your Education</p>
+    </section>
+
+    <section class="section">
+      <h2>Experience</h2>
+      <p id="resumeExperience">Your Experience</p>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <br>
+      <ul id="resumeSkills" class="skills-list">
+        <!-- Skills will be populated here -->
+      </ul>
+      <br>
+      <button id="toggleSkillsBtn">Hide Skills</button>
+    </section>
+
+    <section class="section">
+      <h2>Links</h2>
+      <div id="resumeLinks" class="links">
+        <!-- Links will be populated here -->
+      </div>
+    </section>
+
+    <button id="editResumeBtn">Edit Resume</button>
+    <!-- Add the "Download PDF" button here -->
+    <button id="downloadResumeBtn">Download PDF</button>
+    
+    <!-- Modal for Editing Resume -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Resume</h2>
+        
+        <!-- Input fields for all sections -->
+        <label for="editName">Name</label>
+        <input type="text" id="editName" placeholder="Enter your name">
+        <label for="editTitle">Job Title</label>
+        <input type="text" id="editTitle" placeholder="Enter your job title">
+        <label for="editEmail">Email</label>
+        <input type="email" id="editEmail" placeholder="Enter your email">
+        <label for="editPhone">Phone</label>
+        <input type="text" id="editPhone" placeholder="Enter your phone number">
+        <label for="editLocation">Location</label>
+        <input type="text" id="editLocation" placeholder="Enter your location">
+        <label for="editEducation">Education</label>
+        <textarea id="editEducation" placeholder="Describe your education"></textarea>
+        <label for="editExperience">Experience</label>
+        <textarea id="editExperience" placeholder="Describe your work experience"></textarea>
+        <label for="editSkills">Skills (comma-separated)</label>
+        <input type="text" id="editSkills" placeholder="e.g., JavaScript, Python, Web Development">
+        <label for="editLinks">Links (comma-separated)</label>
+        <input type="text" id="editLinks" placeholder="e.g., LinkedIn URL, GitHub URL">
+        <button id="saveResumeBtn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="resume.js"></script>
+</body>
+</html>
